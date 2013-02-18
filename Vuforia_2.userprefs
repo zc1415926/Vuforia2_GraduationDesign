@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Movement\TouchMove_Append.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Movement\TouchMove_Append.cs" Line="71" Column="6" />
+      <File FileName="Assets\Scripts\PhoenixCtrl.cs" Line="23" Column="2" />
+      <File FileName="Assets\Scripts\SplashScreenScripts\SplashScreenManager.cs" Line="25" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

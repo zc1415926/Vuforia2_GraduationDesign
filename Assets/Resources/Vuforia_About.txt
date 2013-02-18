@@ -1,0 +1,9 @@
+This sample app illustrates how to use the Vuforia ImageTargets feature. The app detects certain images and augments a 3D teapot on top of them.  
+
+To use this app:
+1. Print the image targets located at developer.vuforia.com/resources/samples/files
+2. Point your device at any of the images
+3. See the teapot augmented on  top of the image
+
+© 2010-2012 Qualcomm Austria Research Center GmbH.  All rights reserved.
+Subject to agreements at developer.vuforia.com/legal/EULA
