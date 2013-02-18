@@ -12,6 +12,8 @@ using UnityEngine;
 public class DefaultTrackableEventHandler : MonoBehaviour,
                                             ITrackableEventHandler
 {
+	public AudioSource audioSource;
+	
     #region PRIVATE_MEMBER_VARIABLES
  
     private TrackableBehaviour mTrackableBehaviour;
@@ -67,6 +69,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingFound()
     {
+		audioSource.enabled = true;
+		
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
         Collider[] colliderComponents = GetComponentsInChildren<Collider>();
 
@@ -88,6 +92,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingLost()
     {
+		audioSource.enabled = false;
+		
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
         Collider[] colliderComponents = GetComponentsInChildren<Collider>();
 

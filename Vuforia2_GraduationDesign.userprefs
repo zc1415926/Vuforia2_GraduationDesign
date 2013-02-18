@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs">
+    <Files>
+      <File FileName="Assets\PieMenu\Scenes\TestScripts\MenuItemActions_5.cs" Line="36" Column="18" />
+      <File FileName="Assets\Scripts\PhoenixCtrl.cs" Line="23" Column="4" />
+      <File FileName="Assets\PieMenu\Scripts\PieMenuManager.cs" Line="13" Column="41" />
+      <File FileName="Assets\PieMenu\Scripts\PieMenuCtrl.cs" Line="33" Column="4" />
+      <File FileName="Assets\PieMenu\Scripts\PieMenu.cs" Line="31" Column="16" />
+      <File FileName="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" Line="67" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

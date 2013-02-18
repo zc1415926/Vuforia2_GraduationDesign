@@ -5,20 +5,25 @@ using System.Collections;
 
 public class PhoenixCtrl : MonoBehaviour {
 	
-	protected Animator animator;
+	public Animator animator;
+	public AudioSource audioSource;
+	public bool isFly = false;
 
 	// Use this for initialization
 	void Start () {
 		
 		animator = GetComponent<Animator>();
-		animator.SetBool("boolIsFly", false);
+		animator.SetBool("boolIsFly", isFly);
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	//void Update () {
 	
-	}
+	//}
+	
+	
+		
 	
 	
 }
