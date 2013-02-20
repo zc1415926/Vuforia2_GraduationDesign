@@ -9,6 +9,10 @@ public class PieMenuManager : MonoBehaviour
 	private List<PieMenu> display = new List<PieMenu> ();
 	private static List<Matrix4x4> stack = new List<Matrix4x4> ();
 	private static PieMenuManager _instance = null;
+	
+	private bool isShown;
+	
+
 
 	public static PieMenuManager Instance {
 		get {
@@ -25,6 +29,16 @@ public class PieMenuManager : MonoBehaviour
 			return _instance;
 		}
 	}
+	
+	public bool getShown()
+	{
+		return isShown;
+	}
+	
+	public void setShown(bool shown)
+	{
+		isShown = shown;
+	}
 
 	public void Show (PieMenu menu)
 	{
@@ -35,11 +49,15 @@ public class PieMenuManager : MonoBehaviour
 		}
 		display.Add (menu);
 		StartCoroutine (_Show (menu));
+		
+		
 	}
 
 	public void Hide (PieMenu menu)
 	{
 		StartCoroutine (_Hide (menu));
+		
+		
 	}
 
 	private IEnumerator _Hide (PieMenu menu)
@@ -52,6 +70,8 @@ public class PieMenuManager : MonoBehaviour
 		menu.scale = 0f;
 		menu.angle = 0f;
 		display.Remove (menu);
+		
+		isShown = false;
 	}
 
 	private IEnumerator _Show (PieMenu menu)
@@ -63,6 +83,8 @@ public class PieMenuManager : MonoBehaviour
 		}
 		menu.scale = 1f;
 		menu.angle = 0f;
+		
+		isShown = true;
 	}
 
 	void OnGUI ()
@@ -79,9 +101,6 @@ public class PieMenuManager : MonoBehaviour
 		PushGUI ();
 		//Vector3 origin = Camera.main.WorldToScreenPoint (menu.transform.position);
 		Vector3 origin = menu.guiCamera.WorldToScreenPoint(menu.transform.position);
-		
-		
-		
 		
 		TranslateGUI (origin.x, Screen.height - origin.y);
 		ScaleGUI (menu.scale);

@@ -22,25 +22,22 @@ public class PieMenu : MonoBehaviour
 	[HideInInspector]
 	public PieMenuManager manager;
 	
-	private bool isShown = false;
-	
-	void Awake () {
+	void Awake ()
+	{
 		manager = PieMenuManager.Instance;
 	}
 	
-	void OnMouseUpAsButton () 
-	{
-		Debug.Log("isShown:  " + isShown);
-		if(isShown)
+	void OnMouseUp() 
+	{	
+		if(manager.getShown())
 		{
 			manager.Hide(this);
-			isShown = false;
+			manager.setShown(false);
 		}
 		else
 		{
 			manager.Show(this);
-			isShown = true;
+			manager.setShown(true);
 		}
-
 	}
 }
