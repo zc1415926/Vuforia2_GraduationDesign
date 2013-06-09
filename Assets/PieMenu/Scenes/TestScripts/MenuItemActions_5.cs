@@ -3,16 +3,25 @@ using System.Collections;
 
 public class MenuItemActions_5 : MonoBehaviour 
 {
-	private GameObject phoenix;
-	private PhoenixCtrl phoenixCtrl;
+	//private GameObject phoenix;
+	//private GameObject chicken;
+	public GameObject chicken;
+	//private PhoenixCtrl phoenixCtrl;
+	private ChickenCtrl chickenCtrl;
 	public Vector3 originRotation;
 	
 	void Start()
 	{
-		phoenix = GameObject.Find("Phoenix_FixY");
-		phoenixCtrl = phoenix.GetComponent<PhoenixCtrl>();
+		//phoenix = GameObject.Find("Phoenix_FixY");
+		//phoenixCtrl = phoenix.GetComponent<PhoenixCtrl>();
 		
-		originRotation = phoenix.transform.eulerAngles;
+		//originRotation = phoenix.transform.eulerAngles;
+		
+		
+		//chicken = GameObject.Find("Chicken(try)_13");
+		//phoenixCtrl = phoenix.GetComponent<PhoenixCtrl>();
+		chickenCtrl = chicken.GetComponent<ChickenCtrl>();
+		originRotation = chicken.transform.eulerAngles;
 	}
 		
 	void OnSelect(string command) 
@@ -23,17 +32,17 @@ public class MenuItemActions_5 : MonoBehaviour
 		{	
 			switch(command)
 			{
-			case "Fly":
-				phoenixCtrl.animator.SetBool("boolIsFly", true);
+			case "Jump":
+				chickenCtrl.animator.SetBool("boolIsJump", true);
 				break;
-			case "Idle":
-				phoenixCtrl.animator.SetBool("boolIsFly", false);
+			case "Walk":
+				chickenCtrl.animator.SetBool("boolIsJump", false);
 				break;
-			case "Twitter":
-				phoenixCtrl.audioSource.Play();
+			case "Rooster":
+				chickenCtrl.audioSource.Play();
 				break;
 			case "Rotate":
-				iTween.RotateTo(phoenix, iTween.Hash("x",originRotation.x  ,"y", originRotation.y, "z", originRotation.z, 
+				iTween.RotateTo(chicken, iTween.Hash("x",originRotation.x  ,"y", originRotation.y, "z", originRotation.z, 
 					"easeType", "easeInOutBack", "loopType", "none ", "delay", .2));
 				break;
 			}

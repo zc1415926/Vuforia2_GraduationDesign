@@ -16,14 +16,4 @@ public class PhoenixCtrl : MonoBehaviour {
 		animator.SetBool("boolIsFly", isFly);
 	
 	}
-	
-	// Update is called once per frame
-	//void Update () {
-	
-	//}
-	
-	
-		
-	
-	
 }
